@@ -1,0 +1,19 @@
+[package]
+name = "ap_client_frontend_v2"
+version = "0.2.0"
+edition = "2024"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+[dependencies]
+ap_client_backend_v2 = { git = "https://github.com/jarkko793/backend.git", branch = "main"} 
+wg_2024 = { git = "https://github.com/WGL-2024/WGL_repo_2024.git", features = ["serialize","debug"] }
+messages ={git = "https://github.com/The-Null-Pointer-Patrol/messages.git"}
+crossbeam-channel = "0.5.13"
+actix-web = "4"
+anyhow = "1.0"
+actix-files = "0.6.6"
+serde = { version = "1.0.217", features = ["derive"] }
